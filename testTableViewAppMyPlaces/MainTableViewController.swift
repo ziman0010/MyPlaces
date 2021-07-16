@@ -14,6 +14,16 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         places = realm.objects(Place.self)
     }
+    // MARK: Table view delegate
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let place = places[indexPath.row]
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            StorageManager.deleteObject(place)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 
     // MARK: - Table view data source
 
@@ -41,8 +51,18 @@ class MainTableViewController: UITableViewController {
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue)
     {
         guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
-        newPlaceVC.saveNewPlace()
+        newPlaceVC.savePlace()
         tableView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"
+        {
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            let dvc = segue.destination as! NewPlaceViewController
+            dvc.currentPlace = places[indexPath.row]
+        }
     }
     
 }
