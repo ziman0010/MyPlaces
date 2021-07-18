@@ -15,9 +15,10 @@
 		9D3729CF269D700A000C1369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729CD269D700A000C1369 /* Main.storyboard */; };
 		9D3729D1269D700A000C1369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729D0269D700A000C1369 /* Assets.xcassets */; };
 		9D3729D4269D700A000C1369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729D2269D700A000C1369 /* LaunchScreen.storyboard */; };
+		9D4475F926A416B800707C91 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4475F826A416B800707C91 /* RatingControl.swift */; };
 		9D5090D426A00474008F01F9 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */; };
 		9DA3A86126A0672300419A04 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3A86026A0672300419A04 /* StorageManager.swift */; };
-		9DBBC52E269D834500758DAE /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBC52D269D834500758DAE /* MainTableViewController.swift */; };
+		9DBBC52E269D834500758DAE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBBC52D269D834500758DAE /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +33,10 @@
 		9D3729D0269D700A000C1369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3729D3269D700A000C1369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3729D5269D700A000C1369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4475F826A416B800707C91 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		9DA3A86026A0672300419A04 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		9DBBC52D269D834500758DAE /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		9DBBC52D269D834500758DAE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A37458B608DE5D6B8692CA26 /* Pods-testTableViewAppMyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTableViewAppMyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-testTableViewAppMyPlaces/Pods-testTableViewAppMyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,10 +77,11 @@
 				9D3729C9269D700A000C1369 /* SceneDelegate.swift */,
 				9D3729CD269D700A000C1369 /* Main.storyboard */,
 				9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */,
-				9DBBC52D269D834500758DAE /* MainTableViewController.swift */,
+				9DBBC52D269D834500758DAE /* MainViewController.swift */,
 				9D192D15269ED2BA003CA9DB /* PlaceModel.swift */,
 				9DA3A86026A0672300419A04 /* StorageManager.swift */,
 				9D192D13269ECDA1003CA9DB /* CustomTableViewCell.swift */,
+				9D4475F826A416B800707C91 /* RatingControl.swift */,
 				9D3729D0269D700A000C1369 /* Assets.xcassets */,
 				9D3729D2269D700A000C1369 /* LaunchScreen.storyboard */,
 				9D3729D5269D700A000C1369 /* Info.plist */,
@@ -219,8 +222,9 @@
 			files = (
 				9D3729C8269D700A000C1369 /* AppDelegate.swift in Sources */,
 				9D5090D426A00474008F01F9 /* NewPlaceViewController.swift in Sources */,
-				9DBBC52E269D834500758DAE /* MainTableViewController.swift in Sources */,
+				9DBBC52E269D834500758DAE /* MainViewController.swift in Sources */,
 				9DA3A86126A0672300419A04 /* StorageManager.swift in Sources */,
+				9D4475F926A416B800707C91 /* RatingControl.swift in Sources */,
 				9D192D16269ED2BA003CA9DB /* PlaceModel.swift in Sources */,
 				9D192D14269ECDA1003CA9DB /* CustomTableViewCell.swift in Sources */,
 				9D3729CA269D700A000C1369 /* SceneDelegate.swift in Sources */,
