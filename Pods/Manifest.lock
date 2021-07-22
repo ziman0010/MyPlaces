@@ -1,4 +1,5 @@
 PODS:
+  - Cosmos (23.0.0)
   - Realm (10.10.0):
     - Realm/Headers (= 10.10.0)
   - Realm/Headers (10.10.0)
@@ -6,17 +7,20 @@ PODS:
     - Realm (= 10.10.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 23.0)
   - RealmSwift
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Realm: f501df41a4222c67850c77cf135d472192ecf294
   RealmSwift: c69aadfc7db0d60075178d037c2f34ada73d5201
 
-PODFILE CHECKSUM: f61863eb1b063f373d81ea2fca6a72f6422ac1a9
+PODFILE CHECKSUM: b49ea7dcf82f5e9716865b0484b7cf3a843cc385
 
 COCOAPODS: 1.10.1

@@ -9,7 +9,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
     
-    var currentPlace: Place?
+    var currentPlace: Place!
     var imageIsChanged = false
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -17,11 +17,15 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeLocation: UITextField!
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0,
+                                                         y: 0,
+                                                         width: tableView.frame.size.width,
+                                                         height: tableView.frame.size.height))
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
@@ -61,6 +65,15 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap"
+        {
+            let mapVC = segue.destination as! MapViewController
+            mapVC.place = currentPlace
+        }
+    }
     
     func savePlace() {
         var image: UIImage?
@@ -74,7 +87,12 @@ class NewPlaceViewController: UITableViewController {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         let imageData = image?.pngData()
-        let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: imageData)
+        let newPlace = Place(name: placeName.text!,
+                             location: placeLocation.text,
+                             type: placeType.text,
+                             imageData: imageData,
+                             rating: Double(ratingControl.rating))
+        
         if currentPlace != nil
         {
             try! realm.write {
@@ -82,6 +100,7 @@ class NewPlaceViewController: UITableViewController {
                 currentPlace?.type = newPlace.type
                 currentPlace?.location = newPlace.location
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         }
         else
@@ -152,6 +171,7 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
             placeImage.image = image
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     private func setupNavigationBar()
