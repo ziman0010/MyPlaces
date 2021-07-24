@@ -7,19 +7,31 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
 
-    
+    let locationManager = CLLocationManager()
     let annotationIdentifier = "annotationIdentifier"
-    var place: Place!
+    var place = Place()
+    let regionInMeteres = 10_000.0
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func centerViewInUserLocation() {
+        if let location = locationManager.location?.coordinate
+        {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeteres,
+                                            longitudinalMeters: regionInMeteres)
+            mapView.setRegion(region, animated: true)
+        }
+    }
     @IBAction func closeVC() {
         dismiss(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPlaceMark()
+        checkLocationServices()
 
     }
     
@@ -47,6 +59,58 @@ class MapViewController: UIViewController {
             self.mapView.selectAnnotation(annotation, animated: true)
         }
     }
+    
+    private func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled()
+        {
+            setupLocationManager()
+            checkLocationAuthorization()
+        }
+        else
+        {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your location is not available",
+                               message: "To give permission go to settings -> testTableViewAppMyPlaces -> Location services and turn on")
+            }
+        }
+    }
+    
+    private func setupLocationManager() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+    }
+    
+    private func checkLocationAuthorization() {
+        switch locationManager.authorizationStatus {
+        case .authorizedAlways:
+            break
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            break
+        case .denied:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your location is not available",
+                               message: "To give permission go to settings -> testTableViewAppMyPlaces -> Location")
+            }
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            //Show alert controller
+            break
+        @unknown default:
+            print("New case is available")
+        }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 extension MapViewController: MKMapViewDelegate
 {
@@ -69,5 +133,11 @@ extension MapViewController: MKMapViewDelegate
         }
 
         return annotationView
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
 }
