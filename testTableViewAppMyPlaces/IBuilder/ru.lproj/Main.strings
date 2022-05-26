@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Current address"; ObjectID = "0BB-zw-NEJ"; */
+"0BB-zw-NEJ.text" = "Current address";
+
+/* Class = "UINavigationItem"; title = "My places"; ObjectID = "1kG-uH-hN6"; */
+"1kG-uH-hN6.title" = "My places";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "31W-5F-VCS"; */
+"31W-5F-VCS.text" = "Location";
+
+/* Class = "UINavigationItem"; title = "New Place"; ObjectID = "HCK-Z0-Ujl"; */
+"HCK-Z0-Ujl.title" = "New Place";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Npk-XT-PfN"; */
+"Npk-XT-PfN.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "PSi-NV-DoO"; */
+"PSi-NV-DoO.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "TgK-FK-9jv"; */
+"TgK-FK-9jv.text" = "Type";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "XR5-6Y-QMB"; */
+"XR5-6Y-QMB.text" = "Name";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "gu4-k5-gae"; */
+"gu4-k5-gae.text" = "Location";
+
+/* Class = "UITextField"; placeholder = "Place type"; ObjectID = "hgc-bh-IX4"; */
+"hgc-bh-IX4.placeholder" = "Place type";
+
+/* Class = "UITextField"; placeholder = "Place location"; ObjectID = "jll-51-5zU"; */
+"jll-51-5zU.placeholder" = "Place location";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "nDh-mK-agV"; */
+"nDh-mK-agV.text" = "Name";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "sEQ-4S-Bma"; */
+"sEQ-4S-Bma.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Place name"; ObjectID = "x9V-yW-MTV"; */
+"x9V-yW-MTV.placeholder" = "Place name";
+
+/* Class = "UISegmentedControl"; xum-wP-NLZ.segmentTitles[0] = "Date"; ObjectID = "xum-wP-NLZ"; */
+"xum-wP-NLZ.segmentTitles[0]" = "Date";
+
+/* Class = "UISegmentedControl"; xum-wP-NLZ.segmentTitles[1] = "Name"; ObjectID = "xum-wP-NLZ"; */
+"xum-wP-NLZ.segmentTitles[1]" = "Name";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "yLJ-lf-h7K"; */
+"yLJ-lf-h7K.text" = "Type";

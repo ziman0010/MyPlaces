@@ -14,6 +14,7 @@
 		9D3729CF269D700A000C1369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729CD269D700A000C1369 /* Main.storyboard */; };
 		9D3729D1269D700A000C1369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729D0269D700A000C1369 /* Assets.xcassets */; };
 		9D3729D4269D700A000C1369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3729D2269D700A000C1369 /* LaunchScreen.storyboard */; };
+		9D4354E826BA9F1600813B2B /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4354E726BA9F1600813B2B /* MapManager.swift */; };
 		9D4475F926A416B800707C91 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4475F826A416B800707C91 /* RatingControl.swift */; };
 		9D4E575B26A95E3000230BCD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E575A26A95E3000230BCD /* MapViewController.swift */; };
 		9D5090D426A00474008F01F9 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */; };
@@ -29,13 +30,16 @@
 		9D3729C4269D700A000C1369 /* testTableViewAppMyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTableViewAppMyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3729C7269D700A000C1369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3729C9269D700A000C1369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9D3729CE269D700A000C1369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D3729D0269D700A000C1369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3729D3269D700A000C1369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3729D5269D700A000C1369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4354E726BA9F1600813B2B /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		9D4475F826A416B800707C91 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		9D4E575A26A95E3000230BCD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		9D7F228426B3E73400E14C8B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9D7F228626B3E7B000E14C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D7F228726B3E7BC00E14C8B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		9DA3A86026A0672300419A04 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		9DBBC52D269D834500758DAE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A37458B608DE5D6B8692CA26 /* Pods-testTableViewAppMyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTableViewAppMyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-testTableViewAppMyPlaces/Pods-testTableViewAppMyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,21 +77,62 @@
 		9D3729C6269D700A000C1369 /* testTableViewAppMyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				9D3729C7269D700A000C1369 /* AppDelegate.swift */,
-				9D3729C9269D700A000C1369 /* SceneDelegate.swift */,
-				9D3729CD269D700A000C1369 /* Main.storyboard */,
-				9D4E575A26A95E3000230BCD /* MapViewController.swift */,
-				9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */,
-				9DBBC52D269D834500758DAE /* MainViewController.swift */,
-				9D192D15269ED2BA003CA9DB /* PlaceModel.swift */,
-				9DA3A86026A0672300419A04 /* StorageManager.swift */,
-				9D192D13269ECDA1003CA9DB /* CustomTableViewCell.swift */,
-				9D4475F826A416B800707C91 /* RatingControl.swift */,
-				9D3729D0269D700A000C1369 /* Assets.xcassets */,
-				9D3729D2269D700A000C1369 /* LaunchScreen.storyboard */,
-				9D3729D5269D700A000C1369 /* Info.plist */,
+				9D62F70D26BC0A18008081A6 /* ViewControllers */,
+				9D62F70F26BC0A4A008081A6 /* Helpers */,
+				9D62F70E26BC0A3B008081A6 /* Models */,
+				9D62F71026BC0A5E008081A6 /* SupportFiles */,
+				9D62F71126BC0A78008081A6 /* IBuilder */,
 			);
 			path = testTableViewAppMyPlaces;
+			sourceTree = "<group>";
+		};
+		9D62F70D26BC0A18008081A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D192D13269ECDA1003CA9DB /* CustomTableViewCell.swift */,
+				9DBBC52D269D834500758DAE /* MainViewController.swift */,
+				9D5090D326A00474008F01F9 /* NewPlaceViewController.swift */,
+				9D4E575A26A95E3000230BCD /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9D62F70E26BC0A3B008081A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D192D15269ED2BA003CA9DB /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D62F70F26BC0A4A008081A6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9D4475F826A416B800707C91 /* RatingControl.swift */,
+				9DA3A86026A0672300419A04 /* StorageManager.swift */,
+				9D4354E726BA9F1600813B2B /* MapManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9D62F71026BC0A5E008081A6 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9D3729D0269D700A000C1369 /* Assets.xcassets */,
+				9D3729C7269D700A000C1369 /* AppDelegate.swift */,
+				9D3729C9269D700A000C1369 /* SceneDelegate.swift */,
+				9D3729D5269D700A000C1369 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		9D62F71126BC0A78008081A6 /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				9D3729D2269D700A000C1369 /* LaunchScreen.storyboard */,
+				9D3729CD269D700A000C1369 /* Main.storyboard */,
+			);
+			path = IBuilder;
 			sourceTree = "<group>";
 		};
 		C31E6E0E24977B4E68EE177B /* Frameworks */ = {
@@ -150,6 +195,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 9D3729BB269D7009000C1369;
 			productRefGroup = 9D3729C5269D700A000C1369 /* Products */;
@@ -227,6 +273,7 @@
 				9DA3A86126A0672300419A04 /* StorageManager.swift in Sources */,
 				9D4E575B26A95E3000230BCD /* MapViewController.swift in Sources */,
 				9D4475F926A416B800707C91 /* RatingControl.swift in Sources */,
+				9D4354E826BA9F1600813B2B /* MapManager.swift in Sources */,
 				9D192D16269ED2BA003CA9DB /* PlaceModel.swift in Sources */,
 				9D192D14269ECDA1003CA9DB /* CustomTableViewCell.swift in Sources */,
 				9D3729CA269D700A000C1369 /* SceneDelegate.swift in Sources */,
@@ -239,7 +286,8 @@
 		9D3729CD269D700A000C1369 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9D3729CE269D700A000C1369 /* Base */,
+				9D7F228626B3E7B000E14C8B /* Base */,
+				9D7F228726B3E7BC00E14C8B /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +296,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9D3729D3269D700A000C1369 /* Base */,
+				9D7F228426B3E73400E14C8B /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -259,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -321,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -382,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MSJ4Q555L6;
-				INFOPLIST_FILE = testTableViewAppMyPlaces/Info.plist;
+				INFOPLIST_FILE = testTableViewAppMyPlaces/SupportFiles/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MSJ4Q555L6;
-				INFOPLIST_FILE = testTableViewAppMyPlaces/Info.plist;
+				INFOPLIST_FILE = testTableViewAppMyPlaces/SupportFiles/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
